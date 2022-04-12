@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>FWM-FAIYAZ WEB MARKET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/9ca8fa9437.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="img/x-icon" href="2-removebg-preview.png">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #000000;
+    background-color: black;
+    
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 30px;
+  } 
+  p{
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #90B4F1;
+    font-weight: 400;
+    margin-bottom: 30px
+
+  }
+  .jumbotron {
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    background-color: #3FB228;
+    background-size: cover;
+    background-size: left;
+    left: 12px;
+    background-attachment: fixed;
+  }
+
+  h1{
+    color: #D4EEF0;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #000000;
+  }
+  .logo-small {
+    color: #2DC7E6;
+    font-size: 50px;
+  }
+  .logo {
+    color: #55D131;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #000000 !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #000000 !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: #000000 !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #70bb45;
+    color: #000000;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #15b5e6;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+    height: 70px;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #000000 !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #40EE2B;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  .srt {
+    margin-top: -9px;
+  }
+  .contact-page {
+    margin-left: 300px;
+  background: #ffffff;
+  width: 599px;
+  padding: 20px;
+  height: 369px;
+  margin-top: 100px;
+  border-radius: 0px; 
+  color: #000000;
+  }
+  #facebook-link {
+  width: 70px;
+  height: 60px;
+  background: #0b71f7;
+  text-align: center;
+  margin-top: -56px;
+  margin-left: 440px;
+  position: absolute;
+  text-align: center;
+  display: block;
+  font-size: 39px;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: ease-in-out 2.5s;
+  color: #ffffff;
+}
+#facebook-link:hover {
+  background: #ffffff;
+  border: 2px solid #0b71f7;
+  transition: ease-in-out 2.4s;
+  color: #0b71f7;
+  box-shadow: 0 0 3px #0b71f7, 0 0 5px #0b71f7;
+  text-shadow: 0 0 3px #0b71f7, 0 0 5px #0b71f7;
+}
+::selection{
+  color: #fff;
+  background: #0D6EFD;
+}
+.wrapper{
+  width: 715px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+  height: 509px;
+  margin-left: 200px;
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #000000;
+}
+.wrapper form{
+  margin: 35px 30px;
+}
+.wrapper form.disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+form .dbl-field{
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+.dbl-field .field{
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+.wrapper form i{
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #000000;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+form .field input,
+form .message textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.field input::placeholder,
+.message textarea::placeholder{
+  color: #000000;
+}
+.field input:focus,
+.message textarea:focus{
+  padding-left: 47px;
+  border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+  color: #0D6EFD;
+}
+form .message{
+  position: relative;
+}
+form .message i{
+  top: 30px;
+  font-size: 20px;
+}
+form .message textarea{
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 15px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar{
+  width: 0px;
+}
+.message textarea:focus{
+  padding-top: 14px;
+}
+form .button-area{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0D6EFD;
+  transition: background 0.3s ease;
+}
+.button-area button:hover{
+  background: #025ce3;
+}
+.button-area span{
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+@media (max-width: 600px){
+  .wrapper header{
+    text-align: center;
+  }
+  .wrapper form{
+    margin: 35px 20px;
+  }
+  form .dbl-field{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  form .message textarea{
+    resize: none;
+  }
+  form .button-area{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .button-area button{
+    width: 100%;
+    padding: 11px 0;
+    font-size: 16px;
+  }
+  .button-area span{
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+.s-c {
+  margin-top: -70px;
+
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src="1.png" alt="1" class="srt" width="190" height="69">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#hello">Contact us</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1 style="color: black;"><b>FWM</b></h1> 
+   <p style="color: #fff;"><b>Faiyaz Web Market</b></p> 
+  <form>
+    <div class="input-group">
+      <div class="input-group-btn">
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Company Page</h2><br>
+      <h4>Our first company is BPA ERP, ASL:Application Solution Limited, AccountsGuru<br></h4>
+        <p>(Notice: Now this company working is stopped because of These companies have closed for 
+          they have opened new companies).</p><br>
+      <h4>Our new company is SAL:Software Arena Limited,Payroll,ShohozERP and TigerERP.These are companies are continue there work. </h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-book logo"></span>
+    </div>
+  </div>
+</div>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>We learn:</h4>
+  <br>
+  <div class="row slideanim slide">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo-small"></span>
+      <h4>Accounts</h4>
+      <p>We develop accounts </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="	glyphicon glyphicon-stats logo-small"></span>
+      <h4>Marketing</h4>
+      <p>We develop our marketing</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-retweet logo-small"></span>
+      <h4>Inventory and Billing</h4>
+      <p>We develop our Inventory and Billing</p>
+    </div>
+  </div>
+  <br><br>
+  </div>
+
+
+<!-- Container (Our contact Section) -->
+<div id="hello" class="container-fluid text-center bg-grey">
+  <div class="wrapper">
+    <header>Send us a Message</header>
+    <form action="#">
+      <div class="dbl-field">
+        <div class="field">
+          <input type="text" name="name" placeholder="Enter your name">
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Enter your email">
+          <i class='fas fa-envelope'></i>
+        </div>
+      </div>
+      <div class="dbl-field">
+        <div class="field">
+          <input type="text" name="phone" placeholder="Enter your phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="website" placeholder="Enter your website">
+          <i class='fas fa-globe'></i>
+        </div>
+      </div>
+      <div class="message">
+        <textarea placeholder="Write your message" name="message"></textarea>
+        <i class="material-icons">message</i>
+      </div>
+      <div class="button-area">
+        <button type="submit">Send Message</button>
+        <span></span>
+      </div>
+    </form>
+    <h3 class="s-c">Social media :</h3><a href="https://www.facebook.com/groups/383449033590518"><i id="facebook-link" class="fa-brands fa-facebook"></i></a>
+  </div>
+
+</div>
+
+<!-- Container (Pricing Section) -->
+    <div id="pricing" class="container-fluid text-center bg-grey">
+  <div class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Portfolio</h1>
+        </div>
+        <div class="panel-body">
+          <h1 style="color: #000;">Price</h1>
+          <p><sup>$</sup>100</p>
+        </div>
+        <div class="panel-footer">
+          <a class="btn btn-lg">Buy</a>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Website</h1>
+        </div>
+        <div class="panel-body">
+          <h1 style="color: #000;">Price</h1>
+          <p><sup>$</sup>300</p>
+        </div>
+        <div class="panel-footer">
+          <a class="btn btn-lg">Buy</a>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-censter">
+        <div class="panel-heading">
+          <h1>Software</h1>
+        </div>
+        <div class="panel-body">
+          <h1 style="color: #000; margin-left: 10px; text-align: center;">Price</h1>
+          <p  style="text-align: center;"><sup>$</sup>1000</p>
+        </div>
+        <div class="panel-footer">
+          <a style="margin-left: 10px;" href="e-Commerce Card.com.html" class="btn btn-lg">Buy</a>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+<p>Copyright © 2021 FWM - Faiyaz Web Market</p>
+</a></footer><a href="#myPage" title="To Top">
+<script>
+  //Contact Form in PHP
+const form = document.querySelector("form"),
+statusTxt = form.querySelector(".button-area span");
+form.onsubmit = (e)=>{
+  e.preventDefault();
+  statusTxt.style.color = "#0D6EFD";
+  statusTxt.style.display = "block";
+  statusTxt.innerText = "Sending your message...";
+  form.classList.add("disabled");
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "message.php", true);
+  xhr.onload = ()=>{
+    if(xhr.readyState == 4 && xhr.status == 200){
+      let response = xhr.response;
+      if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
+        statusTxt.style.color = "red";
+      }else{
+        form.reset();
+        setTimeout(()=>{
+          statusTxt.style.display = "none";
+        }, 3000);
+      }
+      statusTxt.innerText = response;
+      form.classList.remove("disabled");
+    }
+  }
+  let formData = new FormData(form);
+  xhr.send(formData);
+}
+</script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+</a></div></body></html>
